@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Slither Clase</title>
+  <meta name="theme-color" content="#0d1222">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="score">Longitud: <span id="scoreValue">0</span></div>
+    <div id="leaderboard">
+      <h3>Top</h3>
+      <ol id="leaderList"></ol>
+    </div>
+    <canvas id="minimap" width="140" height="140"></canvas>
+    <button id="boostBtn" type="button">Turbo</button>
+  </div>
+
+  <div id="startScreen" class="overlay">
+    <h1 class="logo">slither<span>.clase</span></h1>
+    <input id="nickname" type="text" maxlength="14" placeholder="Tu nombre" autocomplete="off">
+    <button id="startBtn" class="btn" type="button">Start</button>
+    <p class="hint desktop-hint">Mueve el mouse para girar · Mantén clic o espacio para acelerar</p>
+    <p class="hint touch-hint">Toca la pantalla para girar · Mantén Turbo para acelerar</p>
+  </div>
+
+  <div id="gameOverScreen" class="overlay hidden">
+    <h2>¡Perdiste!</h2>
+    <p class="final">Longitud final: <strong id="finalScore">0</strong></p>
+    <button id="restartBtn" class="btn" type="button">Start</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
